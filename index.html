@@ -2,6 +2,7 @@
 <html>
 <head>
 <!-- <meta http-equiv="refresh" content="5" /> -->
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet' type='text/css' />
 <title>EyesOff</title>
 <style>
 * {
@@ -14,7 +15,7 @@ margin: 0;
 width: 100%;
 height: 100%;
 font-size: 25px;
-font-family: Helvitica, "Ubuntu Light", Ubuntu, Arial;
+font-family: "Ubuntu Light", Ubuntu, Arial;
 color: #fff;
 background-color: #000;
 }
@@ -33,6 +34,7 @@ p {
 padding: 5px;
 }
 .coolbox {
+font-family: "Ubuntu Light", Ubuntu, Arial;
 font-size: 25px;
 border: 1px solid rgb(200, 100, 0);
 border-bottom-color: rgb(180, 80, 0);
@@ -42,10 +44,10 @@ padding: 10px 15px;
 margin: 20px 3px;
 background-color: rgba(200, 100, 0, 0.2);
 color: #fff;
+cursor: pointer;
 }
 .nextpg {
 margin: 15px 40px;
-cursor: pointer;
 width: 90px;
 }
 #intro {
@@ -57,6 +59,12 @@ display: none;
 #searchbox {
 color: #aaa;
 }
+.headsup {
+font-size: 15px;
+}
+#showmewhy {
+cursor: pointer;
+}
 </style>
 </head>
 <body>
@@ -66,9 +74,10 @@ color: #aaa;
 <div class="coolbox nextpg">Go on...</div>
 </div>
 <div id="app">
-<h1 id="searchhead">Type or say your search query</h1>
+<h1 id="searchhead">Type <del id="showmewhy">or say</del> your search query</h1>
 <form action="#" id="search">
-<input type="search" id="searchbox" class="coolbox" value="Search..." /><input type="submit" class="coolbox" value="Search" />
+<input type="text" id="searchbox" class="coolbox" value="Search..." x-webkit-speech="x-webkit-speech" />
+<input type="submit" class="coolbox" value="Search" />
 </form>
 </div>
 <script type="text/javascript" src="jquery.min.js"></script>
@@ -83,19 +92,29 @@ $(document).ready(function() {
 			$(this).val("");
 			$(this).css("color", "#fff");
 		}
-	});
+	});/*
 	$("#searchbox").blur(function() {
 		if ($(this).val() == "") {
 			$(this).val("Search...");
 			$(this).css("color", "#aaa");
 		}
-	});
+	});*/
 	$("#search").submit(function() {
-		///ask youtube.com
+		// ask youtube.com
+		// http://gdata.youtube.com/feeds/api/videos?q=skateboarding+dog&start-index=0&max-results=10&v=2&key=AI39si6YeaDRSECPlD-FPnLV2r1T8rt6GHxYePHc94KTWRKgu3PnVMPmOaM0bISMORXolzcHLR7sCzCcN5K38carFyUTCH8jSg
+		// api: AI39si6YeaDRSECPlD-FPnLV2r1T8rt6GHxYePHc94KTWRKgu3PnVMPmOaM0bISMORXolzcHLR7sCzCcN5K38carFyUTCH8jSg
 		$("#searchhead").fadeIn("slow").html("Search not available yet! Sorry for party rockng! ");
 		setTimeout('$("#searchhead").fadeIn("slow").html("Type or say your search query");', 2000);
 	});
+	$("#showmewhy").click(function() {
+		$("#searchhead").html('Type <del id="showmewhy">or say</del> your search query <sup class="headsup">(Speech input is not supported in your browser, we recommend <a target="_blank" href="http://chrome.google.com/">Google Chrome</a>)</sup>');
+	});
+	if (document.createElement("input").webkitSpeech != undefined) {
+		// $("#searchhead").html('Type <sup class="headsup">(Voice search is not supported in your browser, we recommend <a target="_blank" href="http://chrome.google.com/">Google Chrome</a>)</sup> your search query');
+		$("#searchhead").html('Type or say your search query <sup class="headsup">(Yay! Your browser supports speech input! )</sup>');
+	}
 });
+
 </script>
 </body>
 </html>
