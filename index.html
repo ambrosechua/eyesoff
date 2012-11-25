@@ -226,6 +226,9 @@ $(document).ready(function() {
 		// ask youtube.com
 		// http://gdata.youtube.com/feeds/api/videos?q=skateboarding+dog&start-index=0&max-results=10&v=2&key=AI39si6YeaDRSECPlD-FPnLV2r1T8rt6GHxYePHc94KTWRKgu3PnVMPmOaM0bISMORXolzcHLR7sCzCcN5K38carFyUTCH8jSg
 		// api: AI39si6YeaDRSECPlD-FPnLV2r1T8rt6GHxYePHc94KTWRKgu3PnVMPmOaM0bISMORXolzcHLR7sCzCcN5K38carFyUTCH8jSg
+			$("#results").html("<div style='text-align: center;' id='loadingimg'><img src='loading.gif' /></div>");
+			$("#appa").fadeOut("slow").css("display", "none");
+			$("#appb").fadeIn("slow").css("display", "block");
 		playnow("serching youtube for "+$("#searchbox").val());
 		$.ajax({
 			type: 'GET',
@@ -241,9 +244,6 @@ $(document).ready(function() {
 			// alert($(doc).find("entry"));
 			//alert($(data).find("entry"));// .find("title").text());
 			// $.xmlns.media = "media:";
-			$("#results").html("<div style='text-align: center;' id='loadingimg'><img src='loading.gif' /></div>");
-			$("#appa").fadeOut("slow").css("display", "none");
-			$("#appb").fadeIn("slow").css("display", "block");
 			$(data).find("entry").each(function(index, domele) {
 				var appstr='<a href="'+$(this).find("player:first").attr("url")+'">#'+(index+1)+' : <div class="result"><img src="'+$(this).find("thumbnail:eq(1)").attr("url")+'" /><h1>'+$(this).find("title:first").text()+'</h1><span>'+$(this).find("description:first").text()+'</span></div></a>';
 				$("#results").append(appstr);
