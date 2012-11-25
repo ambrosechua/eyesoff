@@ -2,8 +2,17 @@
 <html>
 <head>
 <!-- <meta http-equiv="refresh" content="5" /> -->
-<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet' type='text/css' />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="keywords" content="ambc, eyesoff, youtube, speech, voice" />
+<meta name="application-name" content="EyesOff" />
+<meta name="author" content="Ambrose Chua Chi Meng (AmbC)" />
+
 <title>EyesOff</title>
+
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet' type='text/css' />
 <style>
 ::-moz-selection {
 background-color: rgba(200, 100, 0, 0.7);
@@ -25,6 +34,7 @@ font-size: 25px;
 font-family: "Ubuntu Light", Ubuntu, Arial;
 color: #fff;
 background-color: #000;
+opacity: 0.99;
 }
 #appa, #appb, #intro {
 padding: 40px;
@@ -78,10 +88,10 @@ width: 90px;
 #intro {
 display: block;
 }
-#appa {
+#appa, #appb {
 display: none;
 }
-#searchbox {
+#searchbox, #toolsabox {
 color: #aaa;
 }
 .headsup {
@@ -90,34 +100,118 @@ font-size: 15px;
 #showmewhy {
 cursor: pointer;
 }
+#brightness {
+width: 70px;
+font-size: 12px;
+position: fixed;
+bottom: 10px;
+right: 10px;
+margin: 0;
+}
+#playerframe {/*
+width: 1px;
+height: 1px;*/
+min-height: 0;
+min-width: 0;
+background-color: #000;
+display: none;
+}
+.result {
+
+}
 </style>
 </head>
 <body>
 <div id="intro">
-<h1>Project EyesOff</h1>
-<p>Inspired by <b>'No screen at night! '</b>, we give you <b>Project EyesOff</b>! It is a service that allows you to surf YouTube and listen to music via voice recognition and speech. Powered by <b>Google Voice Recognition</b> and <b>text to voice</b>, you can ensure it will give you the best possible results. </p>
-<div class="coolbox nextpg">Go on...</div>
+<h1>Project EyesOff - Purely client-side! </h1>
+<p>Inspired by <b>'No screen at night! '</b>, we give you <b>Project EyesOff</b>! It is a service that allows you to surf YouTube and listen to music via voice recognition and speech. Powered by <b>Google Chrome's buit-in voice input</b> and <b>Google Translate's text to speech</b>, you can ensure it will give you the best possible results. It only works on Google Chrome. <a href="http://wp.me/p2q22L-2x">On my blog</a>. </p>
+<div class="coolbox nextpg">Go on...</div><br /><br />
 </div>
 <div id="appa">
 <h1 id="searchhead">Type <del id="showmewhy">or say</del> your search query</h1>
 <form action="#" id="search">
-<input type="text" id="searchbox" class="coolbox" value="Search..." x-webkit-speech="x-webkit-speech" />
+<input type="text" id="searchbox" class="coolbox" value="Search..." x-webkit-speech="x-webkit-speech" onwebkitspeechchange='$("#search").submit();' />
 <input type="submit" class="coolbox" value="Search" />
 </form>
 </div>
 <div id="appb">
+<h1 id="searchhead">Here are your results</h1>
+<form action="#" id="toolsa">
+<input type="text" id="toolsabox" class="coolbox" value="Command..." x-webkit-speech="x-webkit-speech" onwebkitspeechchange='$("#toolsa").submit();' />
+<input type="submit" class="coolbox" value="Do" />
+</form>
+<div id="results">
+
+</div>
 </div>
 
+<div id="brightness" class="coolbox">Turn down brightness</div>
+
+<!-- 
+<audio id="player">
+  <source src="" type="audio/mp3">
+</audio>  -->
+<iframe id="playerframe" src="" title="This is the player"></iframe>
 
 <script type="text/javascript" src="jquery.min.js"></script>
+<!-- <script type="text/javascript" src="jquery.xmlns.js"></script> -->
+<!-- <script type="text/javascript" src="http://raw.github.com/kvz/phpjs/master/functions/var/var_dump.js"></script> -->
+<!-- <script type="text/javascript" src="http://raw.github.com/hiddentao/google-tts/master/google-tts.min.js"></script> -->
 <script type="text/javascript">
 $(document).ready(function() {
+	ifspeech=document.createElement("input").webkitSpeech;
+	// var tts = new GoogleTTS('en-GB');
+	function playnow(ttsstr) { // HOW TO USE: PUT playnow(fileid); 
+	/*
+	    $.ajax({
+			type: 'GET',
+			url: 'tts.php?q='+ttsstr,
+			success: ttsdone
+		});
+		function ttsdone(data, status){
+			$("#player source").attr("src", data);
+			var audio = $("#player")[0];
+			audio.play();
+		}
+	*/
+		//tts.play(ttsstr);
+		$("#playerframe").attr("src", "http://translate.google.com/translate_tts?tl=en&q="+ttsstr);
+	}/*
+	function getXmlDOMFromString(xmlStr){
+		if (window.ActiveXObject && window.GetObject) {
+			var dom = new ActiveXObject('Microsoft.XMLDOM');
+			dom.loadXML(xmlStr);
+			return dom;
+		}
+		if (window.DOMParser){
+			return new DOMParser().parseFromString(xmlStr,'text/xml');
+		}
+		throw new Error( 'No XML parser available' );
+	}*/
+	if (ifspeech != undefined) {
+		// $("#searchhead").html('Type <sup class="headsup">(Voice search is not supported in your browser, we recommend <a target="_blank" href="http://chrome.google.com/">Google Chrome</a>)</sup> your search query');
+		$("#searchhead").html('Type or say your search query <sup class="headsup">(Yay! Your browser supports speech input! )</sup>');
+	}
+	$("#brightness").click(function() {
+		if ($(this).html()=="Turn down brightness") {
+			$("body").css("opacity", "0.3");
+			$(this).html("Turn up brightness");
+		} else {
+			$("body").css("opacity", "1");
+			$(this).html("Turn down brightness");
+		}
+	});
 	$(".nextpg").click(function() {
 		$("#intro").fadeOut("slow").css("display", "none");
 		$("#appa").fadeIn("slow").css("display", "block");
+		if (ifspeech == undefined) {
+			playnow("please type your search query");
+		} else {
+			playnow("please type or say your search query");
+		}
 	});
-	$("#searchbox").focus(function() {
-		if ($(this).val() == "Search...") {
+	$("#searchbox, #toolsabox").focus(function() {
+		if ($(this).val() == "Search..." || $(this).val() == "Command...") {
 			$(this).val("");
 			$(this).css("color", "#fff");
 		}
@@ -132,24 +226,40 @@ $(document).ready(function() {
 		// ask youtube.com
 		// http://gdata.youtube.com/feeds/api/videos?q=skateboarding+dog&start-index=0&max-results=10&v=2&key=AI39si6YeaDRSECPlD-FPnLV2r1T8rt6GHxYePHc94KTWRKgu3PnVMPmOaM0bISMORXolzcHLR7sCzCcN5K38carFyUTCH8jSg
 		// api: AI39si6YeaDRSECPlD-FPnLV2r1T8rt6GHxYePHc94KTWRKgu3PnVMPmOaM0bISMORXolzcHLR7sCzCcN5K38carFyUTCH8jSg
-		$("#searchhead").fadeIn("slow").html("Search not available yet! Sorry for party rockng! ");
-		if (document.createElement("input").webkitSpeech != undefined) {
-			setTimeout('$("#searchhead").fadeIn("slow").html("Type or say your search query <sup class=\\"headsup\\">(Yay! Your browser supports speech input! )</sup>");', 2000);
-		} else {
-			setTimeout('$("#searchhead").fadeIn("slow").html("Type <del id=\\"showmewhy\\">or say</del> your search query");', 2000);
+		playnow("serching youtube for "+$("#searchbox").val());
+		$.ajax({
+			type: 'GET',
+			url: 'http://gdata.youtube.com/feeds/api/videos?q='+$("#searchbox").val()+'&start-index=1&max-results=20&v=2&key=AI39si6YeaDRSECPlD-FPnLV2r1T8rt6GHxYePHc94KTWRKgu3PnVMPmOaM0bISMORXolzcHLR7sCzCcN5K38carFyUTCH8jSg',
+			dataType: "xml",
+			success: exception
+		});
+		function exception(data, status){
+			// datadb = data;
+			// alert(data+" - lol");
+			// xml = $.parseXML(data);
+			// var xmlData = getXmlDOMFromString(data);
+			// alert($(doc).find("entry"));
+			//alert($(data).find("entry"));// .find("title").text());
+			// $.xmlns.media = "media:";
+			$("#results").html("<div style='text-align: center;' id='loadingimg'><img src='loading.gif' /></div>");
+			$("#appa").fadeOut("slow").css("display", "none");
+			$("#appb").fadeIn("slow").css("display", "block");
+			$(data).find("entry").each(function(index, domele) {
+				var appstr='<a href="'+$(this).find("player:first").attr("url")+'">#'+(index+1)+' : <div class="result"><img src="'+$(this).find("thumbnail:eq(1)").attr("url")+'" /><h1>'+$(this).find("title:first").text()+'</h1><span>'+$(this).find("description:first").text()+'</span></div></a>';
+				$("#results").append(appstr);
+			});
+			$("#loadingimg").html("");
+			playnow("here are your results");
 		}
 		return false;
 	});
-	$("#searchbox").bind("onwebkitspeechchange", function() {
+	$("#searchbox").bind("onwebkitspeechchange", function() { // doesn't work, on doesn't work
 		$("#search").submit();
+		alert("s");
 	});
 	$("#showmewhy").click(function() {
 		$("#searchhead").html('Type <del id="showmewhy">or say</del> your search query <sup class="headsup">(Speech input is not supported in your browser, we recommend <a target="_blank" href="http://chrome.google.com/">Google Chrome</a>)</sup>');
 	});
-	if (document.createElement("input").webkitSpeech != undefined) {
-		// $("#searchhead").html('Type <sup class="headsup">(Voice search is not supported in your browser, we recommend <a target="_blank" href="http://chrome.google.com/">Google Chrome</a>)</sup> your search query');
-		$("#searchhead").html('Type or say your search query <sup class="headsup">(Yay! Your browser supports speech input! )</sup>');
-	}
 });
 
 </script>

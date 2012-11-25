@@ -1,0 +1,408 @@
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:app="http://www.w3.org/2007/app" xmlns:media="http://search.yahoo.com/mrss/" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:gd="http://schemas.google.com/g/2005" xmlns:yt="http://gdata.youtube.com/schemas/2007" gd:etag="W/"CE8CRXwzeyp7I2A9WhNQGEk."">
+<id>
+tag:youtube.com,2008:videos
+</id>
+<updated>
+2012-11-25T11:27:44.283Z
+</updated>
+<category scheme="http://schemas.google.com/g/2005#kind" term="http://gdata.youtube.com/schemas/2007#video">
+<title>
+Videos matching: lmfao
+</title>
+<logo>
+http://www.youtube.com/img/pic_youtubelogo_123x63.gif
+</logo>
+<link rel="alternate" type="text/html" href="http://www.youtube.com"/>
+<link rel="http://schemas.google.com/g/2005#feed" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/videos?v=2"/>
+<link rel="http://schemas.google.com/g/2005#batch" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/videos/batch?v=2"/>
+<link rel="self" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/videos?q=lmfao&start-index=1&max-results=3&v=2"/>
+<link rel="service" type="application/atomsvc+xml" href="http://gdata.youtube.com/feeds/api/videos?alt=atom-service&v=2"/>
+<link rel="next" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/videos?q=lmfao&start-index=4&max-results=3&v=2"/>
+<author>
+<name>
+YouTube
+</name>
+<uri>
+http://www.youtube.com/
+</uri>
+</author>
+<generator version="2.1" uri="http://gdata.youtube.com">
+YouTube data API
+</generator>
+<opensearch:totalresults>
+148223
+</opensearch:totalresults>
+<opensearch:startindex>
+1
+</opensearch:startindex>
+<opensearch:itemsperpage>
+3
+</opensearch:itemsperpage>
+<entry gd:etag="W/"A0cMRH47eCp7I2A9WhNQGE4."">
+<id>
+tag:youtube.com,2008:video:KQ6zr6kCPj8
+</id>
+<published>
+2011-03-09T05:30:54.000Z
+</published>
+<updated>
+2012-11-25T10:24:45.000Z
+</updated>
+<app:control>
+<yt:state name="restricted" reasoncode="limitedSyndication">
+Syndication of this video was restricted.
+</yt:state>
+</app:control>
+<category scheme="http://schemas.google.com/g/2005#kind" term="http://gdata.youtube.com/schemas/2007#video">
+<category scheme="http://gdata.youtube.com/schemas/2007/categories.cat" term="Music" label="Music">
+<title>
+LMFAO - Party Rock Anthem ft. Lauren Bennett, GoonRock
+</title>
+<content type="application/x-shockwave-flash" src="http://www.youtube.com/v/KQ6zr6kCPj8?version=3&f=videos&d=ATyYogbqwqxa4DPqNslKUiAO88HsQjpE1a8d1GxQnGDm&app=youtube_gdata">
+<link rel="alternate" type="text/html" href="http://www.youtube.com/watch?v=KQ6zr6kCPj8&feature=youtube_gdata"/>
+<link rel="http://gdata.youtube.com/schemas/2007#video.responses" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/videos/KQ6zr6kCPj8/responses?v=2"/>
+<link rel="http://gdata.youtube.com/schemas/2007#video.ratings" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/videos/KQ6zr6kCPj8/ratings?v=2"/>
+<link rel="http://gdata.youtube.com/schemas/2007#video.complaints" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/videos/KQ6zr6kCPj8/complaints?v=2"/>
+<link rel="http://gdata.youtube.com/schemas/2007#video.related" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/videos/KQ6zr6kCPj8/related?v=2"/>
+<link rel="http://gdata.youtube.com/schemas/2007#uploader" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/users/k78ZcA6kflEvBR0UrGDH0Q?v=2"/>
+<link rel="self" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/videos/KQ6zr6kCPj8?v=2"/>
+<author>
+<name>
+LMFAOVEVO
+</name>
+<uri>
+http://gdata.youtube.com/feeds/api/users/LMFAOVEVO
+</uri>
+<yt:userid>
+k78ZcA6kflEvBR0UrGDH0Q
+</yt:userid>
+</author>
+<yt:accesscontrol action="comment" permission="allowed">
+<yt:accesscontrol action="commentVote" permission="allowed">
+<yt:accesscontrol action="videoRespond" permission="allowed">
+<yt:accesscontrol action="rate" permission="allowed">
+<yt:accesscontrol action="embed" permission="allowed">
+<yt:accesscontrol action="list" permission="allowed">
+<yt:accesscontrol action="autoPlay" permission="allowed">
+<yt:accesscontrol action="syndicate" permission="allowed">
+<gd:comments>
+<gd:feedlink rel="http://gdata.youtube.com/schemas/2007#comments" href="http://gdata.youtube.com/feeds/api/videos/KQ6zr6kCPj8/comments?v=2" counthint="718711"/>
+</gd:comments>
+<yt:hd>
+<media:group>
+<media:category label="Music" scheme="http://gdata.youtube.com/schemas/2007/categories.cat">
+Music
+</media:category>
+<media:content url="http://www.youtube.com/v/KQ6zr6kCPj8?version=3&f=videos&d=ATyYogbqwqxa4DPqNslKUiAO88HsQjpE1a8d1GxQnGDm&app=youtube_gdata" type="application/x-shockwave-flash" medium="video" isdefault="true" expression="full" duration="376" yt:format="5">
+<media:credit role="uploader" scheme="urn:youtube" yt:display="LMFAOVEVO" yt:type="partner">
+lmfaovevo
+</media:credit>
+<media:description type="plain">
+Buy now glnk.it Music video by LMFAO performing Party Rock Anthem featuring Lauren Bennett and GoonRock. (c) 2011 Interscope #VEVOCertified on July 1, 2011. www.vevo.com www.youtube.com
+</media:description>
+<media:keywords>
+<media:license type="text/html" href="http://www.youtube.com/t/terms">
+youtube
+</media:license>
+<media:player url="http://www.youtube.com/watch?v=KQ6zr6kCPj8&feature=youtube_gdata_player">
+<media:restriction type="country" relationship="deny">
+DE
+</media:restriction>
+<media:thumbnail url="http://i.ytimg.com/vi/KQ6zr6kCPj8/default.jpg" height="90" width="120" time="00:03:08" yt:name="default">
+<media:thumbnail url="http://i.ytimg.com/vi/KQ6zr6kCPj8/mqdefault.jpg" height="180" width="320" yt:name="mqdefault">
+<media:thumbnail url="http://i.ytimg.com/vi/KQ6zr6kCPj8/hqdefault.jpg" height="360" width="480" yt:name="hqdefault">
+<media:thumbnail url="http://i.ytimg.com/vi/KQ6zr6kCPj8/1.jpg" height="90" width="120" time="00:01:34" yt:name="start">
+<media:thumbnail url="http://i.ytimg.com/vi/KQ6zr6kCPj8/2.jpg" height="90" width="120" time="00:03:08" yt:name="middle">
+<media:thumbnail url="http://i.ytimg.com/vi/KQ6zr6kCPj8/3.jpg" height="90" width="120" time="00:04:42" yt:name="end">
+<media:title type="plain">
+LMFAO - Party Rock Anthem ft. Lauren Bennett, GoonRock
+</media:title>
+<yt:aspectratio>
+widescreen
+</yt:aspectratio>
+<yt:duration seconds="376">
+<yt:uploaded>
+2011-03-09T05:30:54.000Z
+</yt:uploaded>
+<yt:uploaderid>
+UCk78ZcA6kflEvBR0UrGDH0Q
+</yt:uploaderid>
+<yt:videoid>
+KQ6zr6kCPj8
+</yt:videoid>
+</yt:duration>
+</media:thumbnail>
+</media:thumbnail>
+</media:thumbnail>
+</media:thumbnail>
+</media:thumbnail>
+</media:thumbnail>
+</media:player>
+</media:keywords>
+</media:content>
+</media:group>
+<gd:rating average="4.850559" max="5" min="1" numraters="1700060" rel="http://schemas.google.com/g/2005#overall">
+<yt:statistics favoritecount="0" viewcount="503150654">
+<yt:rating numdislikes="63515" numlikes="1636545"/>
+</yt:statistics>
+</gd:rating>
+</yt:hd>
+</yt:accesscontrol>
+</yt:accesscontrol>
+</yt:accesscontrol>
+</yt:accesscontrol>
+</yt:accesscontrol>
+</yt:accesscontrol>
+</yt:accesscontrol>
+</yt:accesscontrol>
+</content>
+</category>
+</category>
+</entry>
+<entry gd:etag="W/"A0MASX47eCp7I2A9WhNQGE4."">
+<id>
+tag:youtube.com,2008:video:wyx6JDQCslE
+</id>
+<published>
+2011-09-16T07:00:00.000Z
+</published>
+<updated>
+2012-11-25T10:30:48.000Z
+</updated>
+<app:control>
+<yt:state name="restricted" reasoncode="limitedSyndication">
+Syndication of this video was restricted.
+</yt:state>
+</app:control>
+<category scheme="http://schemas.google.com/g/2005#kind" term="http://gdata.youtube.com/schemas/2007#video">
+<category scheme="http://gdata.youtube.com/schemas/2007/categories.cat" term="Music" label="Music">
+<title>
+LMFAO - Sexy and I Know It
+</title>
+<content type="application/x-shockwave-flash" src="http://www.youtube.com/v/wyx6JDQCslE?version=3&f=videos&d=ATyYogbqwqxa4DPqNslKUiAO88HsQjpE1a8d1GxQnGDm&app=youtube_gdata">
+<link rel="alternate" type="text/html" href="http://www.youtube.com/watch?v=wyx6JDQCslE&feature=youtube_gdata"/>
+<link rel="http://gdata.youtube.com/schemas/2007#video.responses" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/videos/wyx6JDQCslE/responses?v=2"/>
+<link rel="http://gdata.youtube.com/schemas/2007#video.ratings" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/videos/wyx6JDQCslE/ratings?v=2"/>
+<link rel="http://gdata.youtube.com/schemas/2007#video.complaints" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/videos/wyx6JDQCslE/complaints?v=2"/>
+<link rel="http://gdata.youtube.com/schemas/2007#video.related" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/videos/wyx6JDQCslE/related?v=2"/>
+<link rel="http://gdata.youtube.com/schemas/2007#uploader" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/users/k78ZcA6kflEvBR0UrGDH0Q?v=2"/>
+<link rel="self" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/videos/wyx6JDQCslE?v=2"/>
+<author>
+<name>
+LMFAOVEVO
+</name>
+<uri>
+http://gdata.youtube.com/feeds/api/users/LMFAOVEVO
+</uri>
+<yt:userid>
+k78ZcA6kflEvBR0UrGDH0Q
+</yt:userid>
+</author>
+<yt:accesscontrol action="comment" permission="allowed">
+<yt:accesscontrol action="commentVote" permission="allowed">
+<yt:accesscontrol action="videoRespond" permission="allowed">
+<yt:accesscontrol action="rate" permission="allowed">
+<yt:accesscontrol action="embed" permission="allowed">
+<yt:accesscontrol action="list" permission="allowed">
+<yt:accesscontrol action="autoPlay" permission="allowed">
+<yt:accesscontrol action="syndicate" permission="allowed">
+<gd:comments>
+<gd:feedlink rel="http://gdata.youtube.com/schemas/2007#comments" href="http://gdata.youtube.com/feeds/api/videos/wyx6JDQCslE/comments?v=2" counthint="619573"/>
+</gd:comments>
+<yt:hd>
+<media:group>
+<media:category label="Music" scheme="http://gdata.youtube.com/schemas/2007/categories.cat">
+Music
+</media:category>
+<media:content url="http://www.youtube.com/v/wyx6JDQCslE?version=3&f=videos&d=ATyYogbqwqxa4DPqNslKUiAO88HsQjpE1a8d1GxQnGDm&app=youtube_gdata" type="application/x-shockwave-flash" medium="video" isdefault="true" expression="full" duration="204" yt:format="5">
+<media:credit role="uploader" scheme="urn:youtube" yt:display="LMFAOVEVO" yt:type="partner">
+lmfaovevo
+</media:credit>
+<media:description type="plain">
+Music video by LMFAO performing Sexy and I Know It. Get it on iTunes: glnk.it © 2011 Interscope Records #VEVOCertified on November 12, 2011. www.vevo.com www.youtube.com
+</media:description>
+<media:keywords>
+<media:license type="text/html" href="http://www.youtube.com/t/terms">
+youtube
+</media:license>
+<media:player url="http://www.youtube.com/watch?v=wyx6JDQCslE&feature=youtube_gdata_player">
+<media:rating scheme="http://gdata.youtube.com/schemas/2007#mediarating" yt:country="all">
+1
+</media:rating>
+<media:restriction type="country" relationship="deny">
+DE
+</media:restriction>
+<media:thumbnail url="http://i.ytimg.com/vi/wyx6JDQCslE/default.jpg" height="90" width="120" time="00:01:42" yt:name="default">
+<media:thumbnail url="http://i.ytimg.com/vi/wyx6JDQCslE/mqdefault.jpg" height="180" width="320" yt:name="mqdefault">
+<media:thumbnail url="http://i.ytimg.com/vi/wyx6JDQCslE/hqdefault.jpg" height="360" width="480" yt:name="hqdefault">
+<media:thumbnail url="http://i.ytimg.com/vi/wyx6JDQCslE/1.jpg" height="90" width="120" time="00:00:51" yt:name="start">
+<media:thumbnail url="http://i.ytimg.com/vi/wyx6JDQCslE/2.jpg" height="90" width="120" time="00:01:42" yt:name="middle">
+<media:thumbnail url="http://i.ytimg.com/vi/wyx6JDQCslE/3.jpg" height="90" width="120" time="00:02:33" yt:name="end">
+<media:title type="plain">
+LMFAO - Sexy and I Know It
+</media:title>
+<yt:aspectratio>
+widescreen
+</yt:aspectratio>
+<yt:duration seconds="204">
+<yt:uploaded>
+2011-09-16T07:00:00.000Z
+</yt:uploaded>
+<yt:uploaderid>
+UCk78ZcA6kflEvBR0UrGDH0Q
+</yt:uploaderid>
+<yt:videoid>
+wyx6JDQCslE
+</yt:videoid>
+</yt:duration>
+</media:thumbnail>
+</media:thumbnail>
+</media:thumbnail>
+</media:thumbnail>
+</media:thumbnail>
+</media:thumbnail>
+</media:player>
+</media:keywords>
+</media:content>
+</media:group>
+<gd:rating average="4.639656" max="5" min="1" numraters="1134649" rel="http://schemas.google.com/g/2005#overall">
+<yt:statistics favoritecount="0" viewcount="252768122">
+<yt:rating numdislikes="102216" numlikes="1032433"/>
+</yt:statistics>
+</gd:rating>
+</yt:hd>
+</yt:accesscontrol>
+</yt:accesscontrol>
+</yt:accesscontrol>
+</yt:accesscontrol>
+</yt:accesscontrol>
+</yt:accesscontrol>
+</yt:accesscontrol>
+</yt:accesscontrol>
+</content>
+</category>
+</category>
+</entry>
+<entry gd:etag="W/"A0UMRH47eCp7I2A9WhNQGE4."">
+<id>
+tag:youtube.com,2008:video:SkTt9k4Y-a8
+</id>
+<published>
+2012-02-22T08:00:00.000Z
+</published>
+<updated>
+2012-11-25T10:28:05.000Z
+</updated>
+<app:control>
+<yt:state name="restricted" reasoncode="limitedSyndication">
+Syndication of this video was restricted.
+</yt:state>
+</app:control>
+<category scheme="http://schemas.google.com/g/2005#kind" term="http://gdata.youtube.com/schemas/2007#video">
+<category scheme="http://gdata.youtube.com/schemas/2007/categories.cat" term="Music" label="Music">
+<title>
+LMFAO - Sorry For Party Rocking
+</title>
+<content type="application/x-shockwave-flash" src="http://www.youtube.com/v/SkTt9k4Y-a8?version=3&f=videos&d=ATyYogbqwqxa4DPqNslKUiAO88HsQjpE1a8d1GxQnGDm&app=youtube_gdata">
+<link rel="alternate" type="text/html" href="http://www.youtube.com/watch?v=SkTt9k4Y-a8&feature=youtube_gdata"/>
+<link rel="http://gdata.youtube.com/schemas/2007#video.responses" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/videos/SkTt9k4Y-a8/responses?v=2"/>
+<link rel="http://gdata.youtube.com/schemas/2007#video.ratings" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/videos/SkTt9k4Y-a8/ratings?v=2"/>
+<link rel="http://gdata.youtube.com/schemas/2007#video.complaints" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/videos/SkTt9k4Y-a8/complaints?v=2"/>
+<link rel="http://gdata.youtube.com/schemas/2007#video.related" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/videos/SkTt9k4Y-a8/related?v=2"/>
+<link rel="http://gdata.youtube.com/schemas/2007#uploader" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/users/k78ZcA6kflEvBR0UrGDH0Q?v=2"/>
+<link rel="self" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/videos/SkTt9k4Y-a8?v=2"/>
+<author>
+<name>
+LMFAOVEVO
+</name>
+<uri>
+http://gdata.youtube.com/feeds/api/users/LMFAOVEVO
+</uri>
+<yt:userid>
+k78ZcA6kflEvBR0UrGDH0Q
+</yt:userid>
+</author>
+<yt:accesscontrol action="comment" permission="allowed">
+<yt:accesscontrol action="commentVote" permission="allowed">
+<yt:accesscontrol action="videoRespond" permission="allowed">
+<yt:accesscontrol action="rate" permission="allowed">
+<yt:accesscontrol action="embed" permission="allowed">
+<yt:accesscontrol action="list" permission="allowed">
+<yt:accesscontrol action="autoPlay" permission="allowed">
+<yt:accesscontrol action="syndicate" permission="allowed">
+<gd:comments>
+<gd:feedlink rel="http://gdata.youtube.com/schemas/2007#comments" href="http://gdata.youtube.com/feeds/api/videos/SkTt9k4Y-a8/comments?v=2" counthint="199756"/>
+</gd:comments>
+<yt:hd>
+<media:group>
+<media:category label="Music" scheme="http://gdata.youtube.com/schemas/2007/categories.cat">
+Music
+</media:category>
+<media:content url="http://www.youtube.com/v/SkTt9k4Y-a8?version=3&f=videos&d=ATyYogbqwqxa4DPqNslKUiAO88HsQjpE1a8d1GxQnGDm&app=youtube_gdata" type="application/x-shockwave-flash" medium="video" isdefault="true" expression="full" duration="440" yt:format="5">
+<media:credit role="uploader" scheme="urn:youtube" yt:display="LMFAOVEVO" yt:type="partner">
+lmfaovevo
+</media:credit>
+<media:description type="plain">
+Sorry For Party Rocking - Buy the album now! smarturl.it
+</media:description>
+<media:keywords>
+<media:license type="text/html" href="http://www.youtube.com/t/terms">
+youtube
+</media:license>
+<media:player url="http://www.youtube.com/watch?v=SkTt9k4Y-a8&feature=youtube_gdata_player">
+<media:restriction type="country" relationship="deny">
+DE
+</media:restriction>
+<media:thumbnail url="http://i.ytimg.com/vi/SkTt9k4Y-a8/default.jpg" height="90" width="120" time="00:03:40" yt:name="default">
+<media:thumbnail url="http://i.ytimg.com/vi/SkTt9k4Y-a8/mqdefault.jpg" height="180" width="320" yt:name="mqdefault">
+<media:thumbnail url="http://i.ytimg.com/vi/SkTt9k4Y-a8/hqdefault.jpg" height="360" width="480" yt:name="hqdefault">
+<media:thumbnail url="http://i.ytimg.com/vi/SkTt9k4Y-a8/1.jpg" height="90" width="120" time="00:01:50" yt:name="start">
+<media:thumbnail url="http://i.ytimg.com/vi/SkTt9k4Y-a8/2.jpg" height="90" width="120" time="00:03:40" yt:name="middle">
+<media:thumbnail url="http://i.ytimg.com/vi/SkTt9k4Y-a8/3.jpg" height="90" width="120" time="00:05:30" yt:name="end">
+<media:title type="plain">
+LMFAO - Sorry For Party Rocking
+</media:title>
+<yt:aspectratio>
+widescreen
+</yt:aspectratio>
+<yt:duration seconds="440">
+<yt:uploaded>
+2012-02-22T08:00:00.000Z
+</yt:uploaded>
+<yt:uploaderid>
+UCk78ZcA6kflEvBR0UrGDH0Q
+</yt:uploaderid>
+<yt:videoid>
+SkTt9k4Y-a8
+</yt:videoid>
+</yt:duration>
+</media:thumbnail>
+</media:thumbnail>
+</media:thumbnail>
+</media:thumbnail>
+</media:thumbnail>
+</media:thumbnail>
+</media:player>
+</media:keywords>
+</media:content>
+</media:group>
+<gd:rating average="4.7480745" max="5" min="1" numraters="603607" rel="http://schemas.google.com/g/2005#overall">
+<yt:statistics favoritecount="0" viewcount="135753962">
+<yt:rating numdislikes="38016" numlikes="565591"/>
+</yt:statistics>
+</gd:rating>
+</yt:hd>
+</yt:accesscontrol>
+</yt:accesscontrol>
+</yt:accesscontrol>
+</yt:accesscontrol>
+</yt:accesscontrol>
+</yt:accesscontrol>
+</yt:accesscontrol>
+</yt:accesscontrol>
+</content>
+</category>
+</category>
+</entry>
+</category>
+</feed>
