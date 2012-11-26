@@ -291,7 +291,7 @@ $(document).ready(function() {
 			$(data).find("entry").each(function(index, domele) {
 				var appstr='<div class="result"><a href="'+$(this).find("player:first").attr("url")+'"><div class="resultimg"><img src="'+$(this).find("thumbnail:eq(1)").attr("url")+'" /></div><div class="resulttext"><h2>#'+(index+1)+' : '+$(this).find("title:first").text()+'</h2><span>by '+$(this).find("name:first").text()+'</span><p>'+$(this).find("description:first").text()+'</p></div></a></div>';
 				$("#results").append(appstr);
-				listofresults[index]=[$(this).find("player:first").attr("url"), $(this).find("title:first").text(), $(this).find("name:first").text()];
+				listofresults[index]=[$(this).find("player:first").attr("url"), $(this).find("title:first").text(), $(this).find("name:first").text(), $(this).find("content[type='application/x-shockwave-flash']").attr("src")];
 			});
 			playnow("here are your results for "+$("#searchbox").val());
 			$("#resultshead").append(" for "+$("#searchbox").val());
@@ -303,15 +303,6 @@ $(document).ready(function() {
 		docmd=$("#toolsabox").val();
 		switch(docmd) {
 			case "read":
-				/*
-				for (var i = 0; i < listofresults.length; i++) {
-					playnow(listofresults[i][1]+" by "+listofresults[i][2]);
-					// sleep(100);
-					if (i > endwhere) {
-						endwhere=endwhere+1;
-						break;
-					}
-				}*/
 				playnow("number "+(endwhere+1)+" - "+listofresults[endwhere][1]+" by "+listofresults[endwhere][2]);
 				endwhere=endwhere+1;
 				break;
