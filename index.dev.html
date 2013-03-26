@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- <meta http-equiv="refresh" content="5" /> -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -81,7 +80,14 @@ border-bottom-color: rgb(210, 110, 0);
 border-right-color: rgb(210, 110, 0);
 background-color: rgba(200, 100, 0, 0.28);
 }
-.nextpg {
+form {
+	width: 100%;
+}
+input[type=text] {
+	min-width: 300px;
+	width: 50%;
+}
+#nextpg, #nextpgh {
 margin: 15px 40px;
 width: 90px;
 }
@@ -108,17 +114,12 @@ bottom: 10px;
 right: 10px;
 margin: 0;
 }
-#playerframe {/*
-width: 1px;
-height: 1px;*/
+#playerframe {
 min-height: 0;
 min-width: 0;
 background-color: #000;
 display: none;
-}/*
-.result a {
-display: block;
-}*/
+}
 #results {
 position: absolute;
 top: 220px;
@@ -165,8 +166,7 @@ font-weight: 0;
 margin: 1px;
 color: #ccc;
 }
-.result .resultimg {/*
-display: block;*/
+.result .resultimg {
 vertical-align: top;
 float: left;
 }
@@ -200,13 +200,18 @@ color: #88f;
 .red {
 color: #f00;
 }
+#nextpg {/* change to #nextpgh for non-href method */
+display: none;
+}
 </style>
 </head>
 <body>
 <div id="intro">
 <h1>Project EyesOff<sup class="red headsup">BETA</sup> - Purely client-side! </h1>
 <p>Inspired by <b>'No screen at night! '</b>, we give you <b>Project EyesOff</b>! It is a service that allows you to surf YouTube and listen to music via voice recognition and speech. Powered by <b>Google Chrome's buit-in voice input</b> and <b>Google Translate's text to speech</b>, you can ensure it will give you the best possible results. It only works on Google Chrome. <a href="http://wp.me/p2q22L-2x">On my blog</a>. </p>
-<div class="coolbox nextpg">Go on...</div><br /><br />
+<div class="coolbox" id="nextpg">Go on...</div>
+<div class="coolbox" id="nextpgh">Go on...</div>
+<br /><br />
 </div>
 <div id="appa">
 <h1 id="searchhead">Type <del id="showmewhy">or say</del> your search query</h1>
@@ -220,7 +225,7 @@ color: #f00;
 <form action="#" id="toolsa">
 <input type="text" id="toolsabox" class="coolbox" value="Command..." x-webkit-speech="x-webkit-speech" onwebkitspeechchange='$("#toolsa").submit();' />
 <input type="submit" class="coolbox" value="Do" />
-<span>Say or type read: reads results one by one; number <i>x</i>: goes to video; search again: goes back to search;</span>
+<span class="headsup wrap">“read”: reads results one by one; “number <i>x</i>”: goes to video; “search again”: goes back to search;</span>
 </form>
 <div id="results">
 
@@ -230,8 +235,8 @@ color: #f00;
 <div id="brightness" class="coolbox">Turn down brightness</div>
 
 <iframe id="playerframe" name="player" src="" title="This is the player"></iframe>
-
 <script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="http://raw.github.com/cowboy/jquery-hashchange/master/jquery.ba-hashchange.min.js"></script>
 <script type="text/javascript">
 function sleep(milliseconds) {
   var start = new Date().getTime();
@@ -249,7 +254,7 @@ $(document).ready(function() {
 		$("#playerframe").attr("src", "http://translate.google.com/translate_tts?tl=en&q="+ttsstr);
 	}
 	if (ifspeech != undefined) {
-		// $("#searchhead").html('Type <sup class="headsup">(Voice search is not supported in your browser, we recommend <a target="_blank" href="http://chrome.google.com/">Google Chrome</a>)</sup> your search query');
+		/* $("#searchhead").html('Type <sup class="headsup">(Voice search is not supported in your browser, we recommend <a target="_blank" href="http://chrome.google.com/">Google Chrome</a>)</sup> your search query'); */
 		$("#searchhead").html('Type or say your search query <sup class="headsup">(Yay! Your browser supports speech input! )</sup>');
 	}
 	$("#brightness").click(function() {
@@ -261,8 +266,9 @@ $(document).ready(function() {
 			$(this).html("Turn down brightness");
 		}
 	});
-	$(".nextpg").click(function() {
+	$("#nextpg").click(function() {
 		$("#intro").fadeOut("slow").css("display", "none");
+		$("#appb").fadeOut("slow").css("display", "none");
 		$("#appa").fadeIn("slow").css("display", "block");
 		if (ifspeech == undefined) {
 			playnow("please type your search query");
@@ -278,10 +284,10 @@ $(document).ready(function() {
 	});
 	$("#search").submit(function() {
 		$("#results").html("<div style='text-align: center;' id='loadingimg'><img src='loading.gif' /></div>");
+		$("#intro").fadeOut("slow").css("display", "none");
 		$("#appa").fadeOut("slow").css("display", "none");
 		$("#appb").fadeIn("slow").css("display", "block");
 		sleep(100);
-		// playnow("serching youtube for "+$("#searchbox").val());
 		$.ajax({
 			type: 'GET',
 			url: 'http://gdata.youtube.com/feeds/api/videos?q='+$("#searchbox").val()+'&start-index=1&max-results=20&v=2&key=AI39si6YeaDRSECPlD-FPnLV2r1T8rt6GHxYePHc94KTWRKgu3PnVMPmOaM0bISMORXolzcHLR7sCzCcN5K38carFyUTCH8jSg',
@@ -310,6 +316,7 @@ $(document).ready(function() {
 			case "search again":
 				$("#toolsabox").blur();
 				sleep(100);
+				$("#intro").fadeOut("slow").css("display", "none");
 				$("#appb").fadeOut("slow").css("display", "none");
 				$("#appa").fadeIn("slow").css("display", "block");
 				$("#resultshead").html("Here are your results");
@@ -319,9 +326,7 @@ $(document).ready(function() {
 			default:
 				if (docmd.indexOf("number ") == 0) {
 					var nu=parseInt(docmd.split(" ")[1])-1;
-					/////// NEED TO SEND TO IFRAME ///////
 					window.location=listofresults[nu][0];
-					//////////////////////////////////////
 					break;
 				}
 				playnow("unknown command");
@@ -331,8 +336,27 @@ $(document).ready(function() {
 	$("#showmewhy").click(function() {
 		$("#searchhead").html('Type <del id="showmewhy">or say</del> your search query <sup class="headsup">(Speech input is not supported in your browser, we recommend <a target="_blank" href="http://chrome.google.com/">Google Chrome</a>)</sup>');
 	});
+	$(window).hashchange(function() {
+	hash=window.location.hash.substring(1);
+		if (hash!="") {
+			if (hash.indexOf("?q=") !== -1) {
+				$("#resultshead").html("Here are your results");
+				hash=hash.substring(3);
+				$("#intro").fadeOut("slow").css("display", "none");
+				$("#appa").fadeIn("slow").css("display", "block");
+				$("#searchbox").val(hash);
+				$("#search").submit();
+			}
+			else if (hash=="?skipintro") {
+				$("#nextpg").click();
+			}
+		}
+	});
+	$(window).hashchange();
+	$("#nextpgh").click(function() {
+		window.location.hash="#?skipintro";
+	});
 });
-
 </script>
 </body>
 </html>
